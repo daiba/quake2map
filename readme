@@ -1,0 +1,12 @@
+quakemapjp.r
+
+quakemapjp.r is a Rscript, which get last 7days earthquakes
+information from earthquake.usgs.gov, extract that occured
+in Japan region and plot to daily maps in the data directory.
+
+how to use
+
+$ export LANG=C
+$ ./quakemapjp.r
+$ cd data
+$ ffmpeg -r 1 -f image2 -i img%03d.png  -r 1 quakemapjp.mp4
