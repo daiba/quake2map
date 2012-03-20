@@ -2,7 +2,6 @@
 
 library(ggplot2)
 library(maps)
-library(zoo)
 library(xts)
 
 normDepth <- function(x){
