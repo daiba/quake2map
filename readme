@@ -10,3 +10,9 @@ $ export LANG=C
 $ ./quakemapjp.r
 $ cd data
 $ ffmpeg -r 1 -f image2 -i img%03d.png  -r 1 quakemapjp.mp4
+
+or
+
+$ convert -delay 0.01 img*.png quake.gif
+
+# convert is a ImageMagick's command line tool.
