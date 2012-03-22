@@ -49,6 +49,7 @@ plotdata <- function(x){
           coredata(x$Magnitude),
           coredata(x$Depth)
      )
+	 date <- index(x)
      colnames(j) <- c("Lat", "Lon", "Magnitude", "Depth")
      map.point <- map + geom_point(
           data = j,
@@ -59,6 +60,7 @@ plotdata <- function(x){
      )
      map.point <- map.point + scale_colour_discrete("Depth")
      map.point <- map.point + scale_size_discrete("Magnitude")
+	 map.point <- map.point + opts(title = date)
      png(filename = paste(sprintf("data/img%03d", index), "png", sep = "."))
      index <<- index + 1
      print(map.point)
